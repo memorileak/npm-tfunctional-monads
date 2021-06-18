@@ -36,4 +36,16 @@ function chain(f) {
   };
 }
 
-module.exports = {liftMaybe, liftEither, liftIO, map, filter, chain};
+function then(f) {
+  return function(promise) {
+    return promise.then(f);
+  };
+}
+
+function catchError(f) {
+  return function(promise) {
+    return promise.catch(f);
+  };
+}
+
+module.exports = {liftMaybe, liftEither, liftIO, map, filter, chain, then, catchError};
