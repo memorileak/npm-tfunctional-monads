@@ -42,10 +42,10 @@ function then(f) {
   };
 }
 
-function catchError(f) {
+function otherwise(f) {
   return function(promise) {
     return promise.catch(f);
   };
 }
 
-module.exports = {liftMaybe, liftEither, liftIO, map, filter, chain, then, catchError};
+module.exports = {liftMaybe, liftEither, liftIO, map, filter, chain, then, otherwise};
