@@ -52,4 +52,10 @@ function otherwise(f) {
   };
 }
 
-module.exports = {liftMaybe, liftEither, liftIO, map, filter, chain, join, then, otherwise};
+function final(f) {
+  return function(promise) {
+    return promise.finally(f);
+  };
+}
+
+module.exports = {liftMaybe, liftEither, liftIO, map, filter, chain, join, then, otherwise, final};

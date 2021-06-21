@@ -82,4 +82,5 @@ function chain(f)(container) {}
 function join(joinable) {}
 function then(f)(promise) {}
 function otherwise(f)(promise) {}
+function final(f)(promise) {}
 ```
