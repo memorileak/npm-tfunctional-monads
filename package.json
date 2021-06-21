@@ -1,6 +1,6 @@
 {
   "name": "@tfunctional/monads",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Implement common monads",
   "type": "module",
   "scripts": {
