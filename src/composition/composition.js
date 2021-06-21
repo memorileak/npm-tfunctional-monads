@@ -36,6 +36,10 @@ function chain(f) {
   };
 }
 
+function join(joinable) {
+  return joinable.join();
+}
+
 function then(f) {
   return function(promise) {
     return promise.then(f);
@@ -48,4 +52,4 @@ function otherwise(f) {
   };
 }
 
-module.exports = {liftMaybe, liftEither, liftIO, map, filter, chain, then, otherwise};
+module.exports = {liftMaybe, liftEither, liftIO, map, filter, chain, join, then, otherwise};
