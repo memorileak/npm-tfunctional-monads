@@ -36,6 +36,12 @@ function chain(f) {
   };
 }
 
+function orElse(f) {
+  return function(container) {
+    return container.orElse(f);
+  };
+}
+
 function join(joinable) {
   return joinable.join();
 }
@@ -58,4 +64,4 @@ function final(f) {
   };
 }
 
-module.exports = {liftMaybe, liftEither, liftIO, map, filter, chain, join, then, otherwise, final};
+module.exports = {liftMaybe, liftEither, liftIO, map, filter, chain, orElse, join, then, otherwise, final};

@@ -79,6 +79,7 @@ function liftIO(value) {}
 function map(f)(container) {}
 function filter(f)(container) {}
 function chain(f)(container) {}
+function orElse(f)(container) {}
 function join(joinable) {}
 function then(f)(promise) {}
 function otherwise(f)(promise) {}
